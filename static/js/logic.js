@@ -58,15 +58,10 @@ var legend = L.control({ position: 'bottomright' });
         var colors = ["rgb(0,255,51)","yellow","rgb(255,204,0)","rgb(255,153,0)","orange","red"]
         var labels = []
 
-        // Add min & max
-        //div.innerHTML = '<div class="labels"><div class="min">' + limits[0] + '</div>'+ '<div class="mid">'+limits[1]+'</div>'+
-          //      '<div class="max">' + limits[limits.length - 1] + '</div></div>'
-
         limits.forEach(function (limit, index) {
         labels.push('<li><table><tr><td><span style="background-color:' + colors[index] + '">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span><span>&nbsp'+limit+'</span></td></tr></table></li>')
     })
         console.log(labels);
-        //div.innerHTML += '<ul>' + labels.join('') + '</ul>'
         div.innerHTML += '<ul>' +labels.join('')+'</ul>';
         return div
     }
